@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Forma de entrega</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tipografías elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --font-title: "Playfair Display", Georgia, serif;
+      --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      --fg:#1a1a1a;
+      --muted:#5c667a;
+      --accent:#2d6cdf;
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --border:#e7eaf0;
+      --shadow: 0 10px 30px rgba(24, 32, 56, .08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);line-height:1.6}
+    .wrap{max-width: 980px; margin: 26px auto; padding: 0 16px;}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:16px;
+      box-shadow:var(--shadow); padding:34px 38px;
+    }
+    h1{
+      font-family:var(--font-title); font-size:2.25rem; margin:0 0 14px 0;
+      letter-spacing:.2px;
+    }
+    p{margin:.35rem 0}
+    .muted{color:var(--muted)}
+
+    /* Lista numerada con “píldora” azul */
+    ol{counter-reset:item; padding-left:0; margin:14px 0 0 0}
+    ol>li{
+      list-style:none; position:relative; padding-left:54px; margin:14px 0 18px;
+    }
+    ol>li::before{
+      counter-increment:item; content: counter(item) ".";
+      position:absolute; left:0; top:0.1rem;
+      width:38px; height:38px; border-radius:12px;
+      background:#eef3ff; color:var(--accent);
+      display:flex; align-items:center; justify-content:center; font-weight:700;
+      box-shadow: inset 0 0 0 1px #cfe0ff;
+    }
+
+    ul{padding-left:1.15rem; margin:.4rem 0}
+    ul li{margin:.25rem 0}
+
+    @media print{
+      @page{ size:A4; margin:16mm }
+      body{background:#fff}
+      .card{box-shadow:none; border-color:#eceff5}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="card">
+      <h1>Tarea: Trabajo con ramas y funciones en Git</h1>
+
+      <p>Debes entregar un <strong>documento en formato PDF</strong>.</p>
+      <p>El documento debe incluir:</p>
+
+      <ol>
+        <li>
+          <strong>Portada</strong>
+        </li>
+
+        <li>
+          <strong>Introducción breve</strong><br>
+        </li>
+
+        <li>
+          <strong>Desarrollo paso a paso</strong><br>
+          <span class="muted">Describe, con tus propias palabras y capturas de pantalla, <em>cada paso que realizaste</em> durante la práctica:</span>
+          <ul>
+            <li>Creación del repositorio</li>
+            <li>Creación de ramas</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+  </div>
+</body>
+</html>
